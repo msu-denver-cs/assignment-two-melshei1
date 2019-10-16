@@ -19,6 +19,14 @@
   <strong>Many part:</strong>
   <%= @car.many_part %>
 </p>
+<!-- creat list of the cars name, in Part show.html array. -->
+<ul>
+
+  <% @car.parts.each do|part| %>
+    <li><%= part.name %></li>
+  <%end %>
+
+</ul>
 
 <%= link_to 'Edit', edit_car_path(@car) %> |
 <%= link_to 'Back', cars_path %>
