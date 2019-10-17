@@ -32,9 +32,9 @@
   </div>
   <div class=="field" >
     <!-- create label for the parts -->
-    <%= form.label :part_ids %> <Br>
+    <%= form.label :part_id %> <Br>
     <!-- create add drop down list for the parts possible to added -->
-    <%= form.collection_select(:part_ids, @part, :id, :name)%>
+    <%= form.collection_select(:part_ids, Part.all ,:id, :name)%>
   </div>
 
   <div class="actions">
