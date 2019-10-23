@@ -35,14 +35,13 @@ class PartsControllerTest < ActionDispatch::IntegrationTest
 
   test "should update part" do
     patch part_url(@part), params: { part: { name: @part.name } }
-    assert_redirected_to part_url(@part)
+    assert_redirected_to parts_url(@part)
   end
 
   test "should destroy part" do
     assert_difference('Part.count', -1) do
       delete part_url(@part)
     end
-
     assert_redirected_to parts_url
   end
 end

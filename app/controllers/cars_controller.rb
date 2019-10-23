@@ -4,7 +4,7 @@ class CarsController < ApplicationController
   # GET /cars
   # GET /cars.json
   def index
-    @cars = Car.search(params[:search])
+    @cars = Car.search(params[:search]) #Search for all Cars
   end
 
   # GET /cars/1

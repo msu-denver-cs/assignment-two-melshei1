@@ -4,7 +4,7 @@ class MakesController < ApplicationController
   # GET /makes
   # GET /makes.json
   def index
-    @makes = Make.search(params[:search])
+    @makes = Make.search(params[:search]) # Search for all Makes
   end
 
   # GET /makes/1

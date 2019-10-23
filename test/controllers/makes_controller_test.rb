@@ -1,5 +1,5 @@
 require 'test_helper'
-
+require 'minitest'
 class MakesControllerTest < ActionDispatch::IntegrationTest
   setup do
     @make = makes(:one)
@@ -17,6 +17,7 @@ class MakesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create make" do
     assert_difference('Make.count') do
+
       post makes_url, params: { make: { country: @make.country, name: @make.name } }
     end
 
