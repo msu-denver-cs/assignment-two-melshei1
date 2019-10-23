@@ -4,7 +4,6 @@ class PartsController < ApplicationController
   # GET /parts
   # GET /parts.json
   def index
-    @part = Part.all
     @parts = Part.search(params[:search]) # Search for all Parts
   end
 

@@ -11,5 +11,8 @@ class Part < ApplicationRecord
       all
     end
   end
+def is_number?
+  self =~/^\d+$/
 
+end
 end
